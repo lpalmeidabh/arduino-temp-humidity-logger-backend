@@ -1,0 +1,2 @@
+module ThLogsHelper
+end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temperature_celsius: 1.5
+  temperature_fahrenheit: 1.5
+  humidity: 1.5
+  heat_index_celsius: 1.5
+  heat_index_fahrenheit: 1.5
+
+two:
+  temperature_celsius: 1.5
+  temperature_fahrenheit: 1.5
+  humidity: 1.5
+  heat_index_celsius: 1.5
+  heat_index_fahrenheit: 1.5
