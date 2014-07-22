@@ -5,7 +5,7 @@ require 'open-uri'
 	skip_before_filter  :verify_authenticity_token
 	
 	def index
-		@thlogs = ThLog.select(:temperature_celsius, :created_at)
+		@thlogs = ThLog.select(:temperature_celsius, :humidity, :heat_index_celsius, :created_at)
 
 	end
 

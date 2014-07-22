@@ -2,21 +2,21 @@
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Data','Temperatura'],
+          ['Data','Temperatura', 'Umidade', 'Sensação Térmica'],
           <% @thlogs.each do |log|%>
-          ["<%=log.created_at.strftime('%d/%m/%Y %H:%M')%>",<%=log.temperature_celsius%>],
+          ["<%=log.created_at.strftime('%d/%m/%Y %H:%M')%>",<%=log.temperature_celsius%>,<%=log.humidity%>,<%=log.heat_index_celsius%>],
           <%end%>
         ]);
 
         var options = {
-          title: 'Temperatura'
+          title: 'Temperatura - Umidade - Sensação Térmica'
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
-    </script>
-
+      </script>
     <div id="chart_div" style="width: 1200px; height: 500px;"></div>
