@@ -5,8 +5,8 @@ require 'open-uri'
 	skip_before_filter  :verify_authenticity_token
 	
 	def index
-		@thlogs = ThLog.all
-		render :json => {:THLogs => @thlogs}
+		@thlogs = ThLog.select(:temperature_celsius, :created_at)
+
 	end
 
 	def show

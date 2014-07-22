@@ -8,6 +8,8 @@ gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'enumerize', '~> 0.8.0'
 gem 'protected_attributes'
 gem 'simple_calendar'
+gem 'google_charts', '~> 1.2.0'
+
 # Use postgresql as the database for Active Record
 group :production do
   gem 'pg'
